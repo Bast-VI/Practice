@@ -1,0 +1,65 @@
+#include <iostream>
+
+
+bool PlayGame (){
+
+    int SecNumber1 = 2;
+    int SecNumber2 = 7;
+    int SecNumber3 = 3;
+    int NumSum = SecNumber1 + SecNumber2 + SecNumber3;
+    int NumProduct = SecNumber1 * SecNumber2 * SecNumber3;
+
+
+    std::cout << std::endl;
+    std::cout << "\n\nThere are 3 numbers." << std::endl;
+    std::cout << "These numbers add to: " << NumSum << "." << std::endl;
+    std::cout << "These numbers multiply to give: " << NumProduct << "." << std::endl << std::endl;
+
+
+    int Guess1, Guess2, Guess3;
+    std::cout << "Enter three digits with spaces between them as your guesses: ";
+    std::cin >> Guess1;
+    std::cin >> Guess2;
+    std::cin >> Guess3;
+
+    int GuessSum = Guess1 + Guess2 + Guess3;
+    int GuessProduct = Guess1 * Guess2 * Guess3;
+
+
+
+        if(GuessSum == NumSum && GuessProduct == NumProduct ){
+
+        std::cout << std::endl << "You win!";
+
+
+        return true;
+
+    }
+
+        else{
+
+
+
+        std::cout << std::endl << "You lose.";
+        return false;
+
+
+    }
+
+}
+
+
+int main()
+{
+    while(true){
+
+        bool bLevelComplete = PlayGame();
+        std::cin.clear();
+        std::cin.ignore();
+
+
+        
+    }
+
+    return 0;
+}
